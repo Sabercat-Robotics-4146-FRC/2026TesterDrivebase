@@ -96,7 +96,7 @@ public final class Constants {
   /** General Constants **************************************************** */
   public static final double loopPeriodSecs = 0.02;
 
-  public static final boolean tuningMode = false;
+  public static final boolean tuningMode = true;
 
   /************************************************************************* */
   /** Physical Constants for Robot Operation ******************************* */
