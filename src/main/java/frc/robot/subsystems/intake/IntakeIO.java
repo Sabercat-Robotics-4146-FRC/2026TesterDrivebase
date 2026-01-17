@@ -1,0 +1,24 @@
+package frc.robot.subsystems.intake;
+
+import frc.robot.util.RBSIIO;
+import org.littletonrobotics.junction.AutoLog;
+
+public interface IntakeIO extends RBSIIO {
+
+  @AutoLog
+  public static class IntakeIOInputs {
+    public double positionRad = 0.0;
+    public double velocityRadPerSec = 0.0;
+    public double appliedVolts = 0.0;
+    public double[] currentAmps = new double[] {};
+  }
+
+  /** Updates the set of loggable inputs. */
+  public default void updateInputs(IntakeIOInputs inputs) {}
+
+  /** Run closed loop at the specified velocity. */
+  public default void setVelocity(double velocityRadPerSec, double ffVolts) {}
+
+  /** Set velocity PID constants. */
+  public default void configurePID(double kP, double kI, double kD) {}
+}

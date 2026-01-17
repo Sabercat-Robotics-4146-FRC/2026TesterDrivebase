@@ -195,6 +195,8 @@ public final class Constants {
     // Example:
     public static final RobotDeviceId FLYWHEEL_LEADER = new RobotDeviceId(3, "", 8);
     public static final RobotDeviceId FLYWHEEL_FOLLOWER = new RobotDeviceId(4, "", 9);
+    public static final RobotDeviceId INTAKE_MOTOR_ZERO = new RobotDeviceId(5, "", 10);
+    public static final RobotDeviceId INTAKE_MOTOR_ONE = new RobotDeviceId(6, "", 11);
 
     /* BEAM BREAK and/or LIMIT SWITCH DIO CHANNELS */
     // This is where digital I/O feedback devices are defined
@@ -319,6 +321,28 @@ public final class Constants {
   // public static class Mechanism1Constants {}
   // public static class Mechanism2Constants {}
   // ...
+  public static final class IntakeConstants {
+
+    // Mechanism idle mode
+    public static final MotorIdleMode kIntakeIdleMode = MotorIdleMode.COAST; // BRAKE, COAST
+
+    // Mechanism motor gear ratio
+    public static final double kIntakeGearRatio = 1.5;
+
+    // MODE == REAL / REPLAY
+    // Feedforward constants
+    public static final double kStaticGainReal = 0.1;
+    public static final double kVelocityGainReal = 0.05;
+    // Feedback (PID) constants
+    public static final PIDConstants pidReal = new PIDConstants(1.0, 0.0, 0.0);
+
+    // MODE == SIM
+    // Feedforward constants
+    public static final double kStaticGainSim = 0.0;
+    public static final double kVelocityGainSim = 0.03;
+    // Feedback (PID) constants
+    public static final PIDConstants pidSim = new PIDConstants(1.0, 0.0, 0.0);
+  }
 
   /************************************************************************* */
   /** (Semi-)Autonomous Action Constants *********************************** */
