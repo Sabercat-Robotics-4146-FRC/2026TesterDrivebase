@@ -1,0 +1,20 @@
+{
+  "name": "Rebuilt",
+  "rotations": [],
+  "positions": [
+    0,
+    0,
+    0
+  ],
+  "cameras": [],
+  "components": [
+    {
+      "zeroedRotations": [],
+      "zeroedPosition": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}
